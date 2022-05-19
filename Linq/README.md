@@ -1,6 +1,5 @@
-# Linq
+# Linq (Language INtergrated Query)
 
-## : Language INtergrated Query
 
 - C# 언어에 통합된 데이터 질의 기능
 - 데이터 질의 : 데이터 집합에서 원하는 데이터를 찾는 작업
