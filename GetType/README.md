@@ -27,3 +27,5 @@ FieldInfo[] fields = type.GetFields(); // 필드 목록 조회
 foreach (FieldInfo field in fields)
     Console.WriteLine("Type:{0}, Name:{1}", field.FieldType.Name, field.Name);
 ```
+
+![gitcs3](https://user-images.githubusercontent.com/55019081/169193703-5ed3ada0-898b-4112-922b-eae66e03c823.GIF)
