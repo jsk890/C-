@@ -18,7 +18,8 @@ namespace WithPython
             scope.SetVariable("n", "홍길동");
             scope.SetVariable("p", "010-1234-5646");
             ScriptSource source = engine.CreateScriptSourceFromString(
-                //파이썬이므로 코드 앞쪽 Tab 주의
+//******************파이썬*******************
+//파이썬이므로 코드 앞쪽 Tab 주의
                 @"
 class NameCard :
     name = ''
@@ -33,6 +34,7 @@ class NameCard :
 
 NameCard(n, p)
 ");
+//******************파이썬*******************
             dynamic result = source.Execute(scope);
             result.printNameCard();
 
