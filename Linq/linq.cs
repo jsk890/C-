@@ -50,7 +50,7 @@ namespace SimpleLinq
             var profiles = from profile in arrProfile
                            where profile.Height < 175
                            orderby profile.Height
-                           무명 클래스
+                           
                            select new
                            {
                                Name = profile.Name,
