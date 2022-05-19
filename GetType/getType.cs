@@ -7,7 +7,7 @@ namespace GetType
 {
     class MainApp
     {
-        //Int Çü½ÄÀÇ ÁÖ¿ä Á¤º¸¸¦ Ãâ·Â
+        //Int Ã‡Ã¼Â½Ã„Ã€Ã‡ ÃÃ–Â¿Ã¤ ÃÂ¤ÂºÂ¸Â¸Â¦ ÃƒÃ¢Â·Ã‚
         static void PrintInterfaces(Type type)
         {
             Console.WriteLine("----- Interfaces -----");
