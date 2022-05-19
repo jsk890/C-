@@ -8,3 +8,42 @@
 1. Visual Studio -> 도구 탭
 2. Nuget 패키지 관리자 -> 패키지 관리자 콘솔
 3. install-Package IronPython 입력
+```
+namespace WithPython
+{
+
+    class MainApp
+    {
+        static void Main(string[] args)
+        {
+            ScriptEngine engine = Python.CreateEngine();
+            ScriptScope scope = engine.CreateScope();
+            scope.SetVariable("n", "홍길동");
+            scope.SetVariable("p", "010-1234-5646");
+            ScriptSource source = engine.CreateScriptSourceFromString(
+//******************파이썬*******************
+//파이썬이므로 코드 앞쪽 Tab 주의
+                @"
+class NameCard :
+    name = ''
+    phone = ''
+
+    def __init__(self, name, phone) :
+        self.name = name
+        self.phone = phone
+
+    def printNameCard(self) :
+        print self.name + ', ' + self.phone
+
+NameCard(n, p)
+");
+//******************파이썬*******************
+            dynamic result = source.Execute(scope);
+            result.printNameCard();
+
+            Console.WriteLine("{0}, {1}", result.name, result.phone);
+        }
+    }
+}
+```
+![gitcs7](https://user-images.githubusercontent.com/55019081/169218577-87bc34c7-79f7-4703-9696-9d34dbbb4c66.GIF)
